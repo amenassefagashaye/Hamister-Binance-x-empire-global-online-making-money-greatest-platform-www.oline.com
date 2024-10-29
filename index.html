@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn Tons - November 2024</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+      background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+      overflow: hidden;
+    }
+
+    .header, .footer {
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      background-color: #004a99;
+      color: white;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 14px;
+    }
+
+    /* Sign-In Page */
+    #signInPage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    #signInButton, #signInPage input {
+      margin-top: 15px; /* Increased line spacing */
+      padding: 12px; /* Increased padding for buttons */
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 1.5; /* Increased line height */
+      width: 100%; /* Full width */
+    }
+
+    #signInButton {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Home and Task Pages */
+    #homePage, #taskPage, #withdrawPage {
+      display: none;
+      text-align: center;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%; /* Full width */
+    }
+
+    .header-buttons, .task-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 25px; /* Increased gap for spacing */
+      margin: 20px 0;
+      width: 100%; /* Full width */
+    }
+
+    .header-button, .task-button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 14px; /* Increased padding for buttons */
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      line-height: 1.5; /* Increased line height */
+      width: 100%; /* Full width */
+      height: 70px; /* Equal height for buttons */
+    }
+
+    .header-button:hover, .task-button:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+
+    /* Withdraw Button */
+    #claimButton {
+      background-color: #dc3545; /* Different color for clarity */
+      color: #fff;
+      padding: 16px; /* Increased padding for larger button */
+      border: none;
+      border-radius: 8px;
+      font-size: 20px; /* Increased font size */
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      line-height: 1.5; /* Increased line height */
+      width: 100%; /* Full width */
+      height: 70px; /* Equal height for buttons */
+    }
+
+    #claimButton:hover {
+      background-color: #c82333; /* Darker shade on hover */
+      transform: scale(1.05);
+    }
+
+    /* Bottom Navigation */
+    .bottom-nav {
+      display: none;
+      width: 100%;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .bottom-button {
+      background-color: #444;
+      color: white;
+      padding: 12px; /* Increased padding */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      line-height: 1.5; /* Increased line height */
+      width: 100%; /* Full width */
+      height: 70px; /* Equal height for buttons */
+    }
+
+    .bottom-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    New November, 2024<br>
+    Hamster Binance X-Empire Airdrops<br>
+    Earn Money Everywhere Now
+  </div>
+
+  <!-- Sign-In Page -->
+  <div id="signInPage">
+    <h1>Welcome to Earn Tons</h1>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    <button id="signInButton">Sign In</button>
+  </div>
+
+  <!-- Home Page -->
+  <div id="homePage">
+    <h1>Earn Tons</h1>
+    <div class="header-buttons">
+      <button id="tonsButton" class="header-button">Tons: 0</button>
+      <button id="dollarButton" class="header-button">Dollars: $0</button>
+    </div>
+  </div>
+
+  <!-- Task Page -->
+  <div id="taskPage">
+    <h1>Earn Tons</h1>
+    <div class="task-buttons">
+      <button class="task-button" onclick="completeTask('telegram', 5000, 'https://t.me/GOGSmore')">Join Telegram to earn 5,000 tons</button>
+      <button class="task-button" onclick="completeTask('youtube', 10000, 'https://www.youtube.com/channel/UCLBivSEh30F44ptAAgEVRUA?sub_confirmation=1')">Subscribe YouTube to earn 10,000 tons</button>
+      <button class="task-button" onclick="completeTask('tiktok', 2000, 'https://www.tiktok.com/@assefagashaye')">Follow TikTok to earn 2,000 tons</button>
+      <button class="task-button" onclick="completeTask('facebook', 2000, 'https://www.facebook.com/')">Follow Facebook to earn 2,000 tons</button>
+      <button class="task-button" onclick="completeTask('friends', 7000, '#')">Share with Friends to earn 7,000 tons</button>
+    </div>
+  </div>
+
+  <!-- Withdraw Page -->
+  <div id="withdrawPage">
+    <h1>Withdrawal Details</h1>
+    <input type="text" id="nationality" placeholder="Nationality" required><br>Nationality<br>
+    <input type="text" id="fullName" placeholder="Full Name" required><br>Full Name<br>
+    <input type="text" id="bankAccount" placeholder="Bank Account" required><br>Bank Account<br>
+    <input type="number" id="amount" placeholder="Amount in ETB" required><br>Amount in ETB<br>
+    <button id="claimButton">Claim</button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav" id="bottomNav">
+    <button class="bottom-button" onclick="showPage('home')">Home</button>
+    <button class="bottom-button" onclick="showPage('task')">Task</button>
+    <button class="bottom-button" onclick="navigateTo('https://t.me/play_payouts')">Game</button>
+    <button class="bottom-button" onclick="showPage('withdraw')">Withdraw</button>
+    <button class="bottom-button" onclick="navigateTo('https://www.youtube.com/channel/UCLBivSEh30F44ptAAgEVRUA?sub_confirmation=1')">Boost</button>
+  </div>
+
+  <div class="footer">
+    © All rights reserved, November 2024
+  </div>
+
+  <script>
+    let totalTons = 0;
+    const tasksCompleted = { telegram: false, youtube: false, tiktok: false, facebook: false, friends: false };
+    let claimAttempt = 0;
+
+    document.getElementById("signInButton").addEventListener("click", function() {
+      document.getElementById("signInPage").style.display = "none";
+      document.getElementById("bottomNav").style.display = "flex";
+      showPage('home');
+    });
+
+    const updateTonsDisplay = () => {
+      document.getElementById("tonsButton").textContent = `Tons: ${totalTons}`;
+      document.getElementById("dollarButton").textContent = `Dollars: $${(totalTons / 1000000).toFixed(2)}`;
+    };
+
+    const completeTask = (task, reward, link) => {
+      if (!tasksCompleted[task]) {
+        tasksCompleted[task] = true;
+        totalTons += reward;
+        updateTonsDisplay();
+        window.open(link, '_blank');
+        document.querySelector(`.task-button:nth-child(${Object.keys(tasksCompleted).indexOf(task) + 1})`).disabled = true; // Disable the button after completion
+      } else {
+        alert("You've already completed this task.");
+      }
+    };
+
+    const showPage = (page) => {
+      document.getElementById("homePage").style.display = 'none';
+      document.getElementById("taskPage").style.display = 'none';
+      document.getElementById("withdrawPage").style.display = 'none';
+      if (page === 'home') {
+        document.getElementById("homePage").style.display = 'flex';
+      } else if (page === 'task') {
+        document.getElementById("taskPage").style.display = 'flex';
+      } else if (page === 'withdraw') {
+        document.getElementById("withdrawPage").style.display = 'flex';
+      }
+    };
+
+    const navigateTo = (url) => {
+      window.open(url, '_blank');
+    };
+  </script>
+</body>
+</html>
